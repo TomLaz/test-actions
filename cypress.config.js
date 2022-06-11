@@ -1,10 +1,8 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  component: {
-    devServer: {
-      framework: 'react', // or vue
-      bundler: 'webpack',
-    },
+  e2e: {
+    supportFile: false,
+    specPattern: 'cypress/integration/**/*.cy.js'
   },
 })
